@@ -40,13 +40,14 @@
             label3 = new Label();
             numericUpDown1 = new NumericUpDown();
             label4 = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(14, 340);
+            dateTimePicker1.Location = new Point(12, 422);
             dateTimePicker1.Margin = new Padding(4);
             dateTimePicker1.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
             dateTimePicker1.MinDate = new DateTime(2024, 1, 1, 0, 0, 0, 0);
@@ -73,7 +74,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.OliveDrab;
-            label1.Location = new Point(14, 311);
+            label1.Location = new Point(12, 398);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(265, 20);
@@ -85,7 +86,7 @@
             button2.BackColor = Color.Honeydew;
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(1062, 512);
+            button2.Location = new Point(1062, 490);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(329, 81);
@@ -99,7 +100,7 @@
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.ForeColor = Color.OliveDrab;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(743, 345);
+            comboBox1.Location = new Point(14, 361);
             comboBox1.Margin = new Padding(4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(448, 33);
@@ -109,11 +110,11 @@
             // 
             button3.BackColor = Color.Honeydew;
             button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(1199, 346);
+            button3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(470, 361);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
-            button3.Size = new Size(189, 35);
+            button3.Size = new Size(189, 33);
             button3.TabIndex = 10;
             button3.Text = "Применить место";
             button3.UseVisualStyleBackColor = false;
@@ -124,19 +125,19 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.OliveDrab;
-            label2.Location = new Point(743, 316);
+            label2.Location = new Point(13, 337);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(189, 20);
+            label2.Size = new Size(141, 20);
             label2.TabIndex = 11;
-            label2.Text = "Выбор места проведения";
+            label2.Text = "Место проведения";
             // 
             // button1
             // 
             button1.BackColor = Color.MistyRose;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(13, 512);
+            button1.Location = new Point(726, 490);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(328, 81);
@@ -147,7 +148,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(14, 406);
+            textBox1.Location = new Point(12, 481);
             textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(332, 31);
@@ -158,21 +159,21 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.OliveDrab;
-            label3.Location = new Point(13, 377);
+            label3.Location = new Point(12, 457);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(204, 20);
+            label3.Size = new Size(146, 20);
             label3.TabIndex = 14;
-            label3.Text = "Введите название концерта";
+            label3.Text = "Название концерта";
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(14, 473);
+            numericUpDown1.Location = new Point(13, 540);
             numericUpDown1.Margin = new Padding(4);
             numericUpDown1.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numericUpDown1.Minimum = new decimal(new int[] { 1000000000, 0, 0, int.MinValue });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(188, 31);
+            numericUpDown1.Size = new Size(208, 31);
             numericUpDown1.TabIndex = 15;
             // 
             // label4
@@ -180,18 +181,33 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.OliveDrab;
-            label4.Location = new Point(13, 444);
+            label4.Location = new Point(12, 516);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(249, 20);
+            label4.Size = new Size(209, 20);
             label4.TabIndex = 16;
-            label4.Text = "Введите желаемую сумму за заказ";
+            label4.Text = "Высчитанная сумма за заказ";
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Honeydew;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.Location = new Point(229, 540);
+            button4.Margin = new Padding(4);
+            button4.Name = "button4";
+            button4.Size = new Size(189, 31);
+            button4.TabIndex = 17;
+            button4.Text = "Калькулятор";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1404, 606);
+            ClientSize = new Size(1404, 584);
+            Controls.Add(button4);
             Controls.Add(label4);
             Controls.Add(numericUpDown1);
             Controls.Add(label3);
@@ -240,5 +256,6 @@
         private Label label3;
         private NumericUpDown numericUpDown1;
         private Label label4;
+        private Button button4;
     }
 }

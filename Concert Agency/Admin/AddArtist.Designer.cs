@@ -246,7 +246,6 @@
             Margin = new Padding(4);
             Name = "AddArtist";
             Text = "Artist";
-            Load += Artist_Load;
             ResumeLayout(false);
             PerformLayout();
         }

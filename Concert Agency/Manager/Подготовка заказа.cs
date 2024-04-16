@@ -267,6 +267,23 @@ namespace Manager
             // Если формат не соответствует ожидаемому, возвращаем Guid.Empty
             return Guid.Empty;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Open(new Calculator(this));
+        }
+        private void Open(Form form)
+        {
+            Enabled = false;
+            form.Owner = this;
+            form.FormClosed += (s, args) => Enabled = true;
+            form.Show();
+        }
+
+        public void EnableMainForm()
+        {
+            Enabled = true;
+        }
     }
 
     public class ComboBoxItem

@@ -136,9 +136,19 @@ namespace Manager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OrdersHistory OrdersHistory = new OrdersHistory();
-            OrdersHistory.Owner = this;
-            OrdersHistory.ShowDialog();
+            Open(new OrdersHistory(this));
+        }
+        private void Open(Form form)
+        {
+            Enabled = false;
+            form.Owner = this;
+            form.FormClosed += (s, args) => Enabled = true;
+            form.Show();
+        }
+
+        public void EnableMainForm()
+        {
+            Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
