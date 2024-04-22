@@ -47,16 +47,21 @@
             button16 = new Button();
             button17 = new Button();
             button19 = new Button();
+            button2 = new Button();
+            button18 = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 21);
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(12, 24);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(290, 58);
+            textBox1.Size = new Size(290, 55);
             textBox1.TabIndex = 0;
+            textBox1.Text = "0";
             // 
             // button1
             // 
@@ -237,11 +242,35 @@
             button19.UseVisualStyleBackColor = true;
             button19.Click += NumberButton_Click;
             // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(160, 105);
+            button2.Name = "button2";
+            button2.Size = new Size(68, 55);
+            button2.TabIndex = 20;
+            button2.Text = "←";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button18
+            // 
+            button18.Location = new Point(86, 105);
+            button18.Name = "button18";
+            button18.Size = new Size(68, 55);
+            button18.TabIndex = 21;
+            button18.Text = "C";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
+            // 
             // Calculator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(309, 415);
+            Controls.Add(button18);
+            Controls.Add(button2);
             Controls.Add(button19);
             Controls.Add(button17);
             Controls.Add(button16);
@@ -261,7 +290,9 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "Calculator";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculator";
+            Load += Calculator_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -287,5 +318,7 @@
         private Button button16;
         private Button button17;
         private Button button19;
+        private Button button2;
+        private Button button18;
     }
 }

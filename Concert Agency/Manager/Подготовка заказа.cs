@@ -63,7 +63,9 @@ namespace Manager
 
                     if (riderRequest != null)
                     {
-                        item.SubItems.Add(riderRequest.RiderParameters);
+                        // Обрезаем строку и удаляем лишние пробелы справа
+                        string riderParameters = riderRequest.RiderParameters.Substring(riderRequest.RiderParameters.IndexOf(':') + 1).TrimEnd();
+                        item.SubItems.Add(riderParameters);
                     }
                     else
                     {
@@ -72,7 +74,9 @@ namespace Manager
 
                     if (organizationalRequest != null)
                     {
-                        item.SubItems.Add(organizationalRequest.OrganizationParameters);
+                        // Обрезаем строку и удаляем лишние пробелы справа
+                        string organizationParameters = organizationalRequest.OrganizationParameters.Substring(organizationalRequest.OrganizationParameters.IndexOf(':') + 1).TrimEnd();
+                        item.SubItems.Add(organizationParameters);
                     }
                     else
                     {

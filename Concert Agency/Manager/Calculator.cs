@@ -35,9 +35,68 @@ namespace Manager
         private void OperationButton_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            operation = button.Text[0];
-            result = double.Parse(textBox1.Text);
+            char newOperation = button.Text[0];
+
+            // Проверяем, есть ли введенное число
+            if (string.IsNullOrEmpty(currentInput))
+            {
+                // Если нет, проверяем, есть ли предыдущий результат
+                if (operation != '\0')
+                {
+                    // Если есть, сохраняем текущую операцию
+                    operation = newOperation;
+                }
+                return;
+            }
+
+            double currentOperand = double.Parse(currentInput);
+
+            // Если уже есть предыдущий результат и операция, выполняем операцию
+            if (operation != '\0')
+            {
+                // Выполняем предыдущую операцию
+                switch (operation)
+                {
+                    case '+':
+                        result += currentOperand;
+                        break;
+                    case '-':
+                        result -= currentOperand;
+                        break;
+                    case '*':
+                        result *= currentOperand;
+                        break;
+                    case '/':
+                        if (currentOperand != 0)
+                            result /= currentOperand;
+                        else
+                        {
+                            MessageBox.Show("Error: Division by zero!");
+                            return; // Возвращаемся без изменений
+                        }
+                        break;
+                    case '%':
+                        result = result * (currentOperand / 100);
+                        break;
+                    default:
+                        result = currentOperand;
+                        break;
+                }
+
+                // Отображаем результат вычисления
+                textBox1.Text = result.ToString();
+            }
+            else
+            {
+                // Если нет предыдущего результата, просто сохраняем текущий ввод
+                result = currentOperand;
+            }
+
+            // Очищаем текущий ввод
             currentInput = string.Empty;
+
+            // Сохраняем новую операцию
+            operation = newOperation;
         }
 
         private void EqualsButton_Click(object sender, EventArgs e)
@@ -75,7 +134,31 @@ namespace Manager
         {
             currentInput = string.Empty;
             result = 0;
-            textBox1.Text = string.Empty;
+            textBox1.Text = "0";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(currentInput))
+            {
+                // Удаляем последний символ из текущего ввода
+                currentInput = currentInput.Remove(currentInput.Length - 1);
+                // Отображаем текущий ввод
+                textBox1.Text = currentInput;
+            }
+        }
+
+        private void Calculator_Load(object sender, EventArgs e)
+        {
+            textBox1.Cursor = Cursors.Arrow;
+            textBox1.SelectionLength = 0;
+            textBox1.SelectionStart = 0;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            currentInput = string.Empty;
+            textBox1.Text = "0"; // Можно также очистить текстовое поле, чтобы отобразить, что введено "0"
         }
     }
 }

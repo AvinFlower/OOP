@@ -60,12 +60,14 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1745, 713);
             Controls.Add(button1);
             Controls.Add(listView1);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "OrdersHistory";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ИСТОРИЯ ЗАКАЗОВ";
             Load += OrdersHistory_Load;
             ResumeLayout(false);

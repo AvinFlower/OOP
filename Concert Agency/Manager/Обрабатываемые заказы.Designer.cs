@@ -38,7 +38,7 @@
             // 
             listView1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             listView1.Location = new Point(0, -2);
-            listView1.Margin = new Padding(4, 4, 4, 4);
+            listView1.Margin = new Padding(4);
             listView1.MultiSelect = false;
             listView1.Name = "listView1";
             listView1.Size = new Size(1665, 634);
@@ -51,7 +51,7 @@
             comboBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(444, 658);
-            comboBox1.Margin = new Padding(4, 4, 4, 4);
+            comboBox1.Margin = new Padding(4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(425, 33);
             comboBox1.TabIndex = 7;
@@ -61,7 +61,7 @@
             button1.BackColor = Color.Honeydew;
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(1259, 640);
-            button1.Margin = new Padding(4, 4, 4, 4);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(392, 66);
             button1.TabIndex = 8;
@@ -75,11 +75,11 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(877, 640);
-            button2.Margin = new Padding(4, 4, 4, 4);
+            button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(374, 66);
             button2.TabIndex = 13;
-            button2.Text = "Отклонение заказа";
+            button2.Text = "Отменить заказ";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -87,14 +87,16 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1664, 711);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(listView1);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "OrdersInProcess";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ОБРАБАТЫВАЕМЫЕ ЗАКАЗЫ";
             Load += OrdersInProcess_Load;
             ResumeLayout(false);

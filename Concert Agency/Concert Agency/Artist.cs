@@ -17,6 +17,7 @@ namespace Concert_Agency
         public ICollection<Rider> Riders { get; set; } = new List<Rider>();
         public ICollection<ConcertArtist> ConcertArtists { get; set; } = new List<ConcertArtist>();
         public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public ICollection<Authentication> Authentications { get; set; } = new List<Authentication>();
 
 
         public void Add(string? Email, string PhoneNumber, DateTime DateOfBirth, string Country, string FirstName, string LastName, string MiddleName, string PassportData)

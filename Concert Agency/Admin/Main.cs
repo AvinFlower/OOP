@@ -1,12 +1,19 @@
-using Concert_Agency;
-using Microsoft.EntityFrameworkCore;
+﻿using Concert_Agency;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Admin
 {
     public partial class Main : Form
     {
         private readonly ConcertContext _dbContext;
-
         public Main()
         {
             InitializeComponent();
@@ -15,57 +22,12 @@ namespace Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Open(new AddArtist(this));
+            Open(new AddValue(this));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Open(new AddManager(this));
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Open(new AddVenue(this));
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Open(new AddConcert(this));
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Open(new AddConcertManager(this));
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Open(new AddOrder(this));
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Open(new AddTicket(this));
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Open(new AddConcertArtist(this));
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Open(new AddRider_RiderRequest(this));
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Open(new AddTechnicalParameters(this));
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            Open(new AddOrganizationalRequest(this));
+            Open(new DeleteValue(this));
         }
 
         private void Open(Form form)
@@ -74,6 +36,7 @@ namespace Admin
             form.Owner = this;
             form.FormClosed += (s, args) => Enabled = true;
             form.Show();
+            Hide();
         }
 
         public void EnableMainForm()

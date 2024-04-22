@@ -1,3 +1,5 @@
+using Concert_Agency;
+
 namespace Client
 {
     internal static class Program
@@ -11,7 +13,14 @@ namespace Client
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new ArtistIdentification());
+
+            // Генерация нового artistId
+            Guid artistId = Guid.NewGuid();
+
+            // Передача artistId в конструктор ArtistIdentification
+            //Application.Run(new ArtistIdentification(artistId));
+            Application.Run(new FillRider(artistId));
         }
+
     }
 }

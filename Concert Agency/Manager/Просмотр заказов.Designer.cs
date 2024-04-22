@@ -40,7 +40,7 @@
             button1.BackColor = Color.Honeydew;
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(1312, 612);
-            button1.Margin = new Padding(4, 4, 4, 4);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(446, 80);
             button1.TabIndex = 0;
@@ -54,7 +54,7 @@
             comboBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(879, 637);
-            comboBox1.Margin = new Padding(4, 4, 4, 4);
+            comboBox1.Margin = new Padding(4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(425, 33);
             comboBox1.TabIndex = 3;
@@ -63,7 +63,7 @@
             // 
             listView1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             listView1.Location = new Point(-2, -2);
-            listView1.Margin = new Padding(4, 4, 4, 4);
+            listView1.Margin = new Padding(4);
             listView1.MultiSelect = false;
             listView1.Name = "listView1";
             listView1.Size = new Size(1773, 606);
@@ -75,7 +75,7 @@
             button2.BackColor = SystemColors.Window;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(13, 612);
-            button2.Margin = new Padding(4, 4, 4, 4);
+            button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(210, 84);
             button2.TabIndex = 6;
@@ -88,7 +88,7 @@
             button3.BackColor = SystemColors.Window;
             button3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Location = new Point(231, 612);
-            button3.Margin = new Padding(4, 4, 4, 4);
+            button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(312, 84);
             button3.TabIndex = 7;
@@ -100,6 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1771, 703);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -107,8 +108,9 @@
             Controls.Add(comboBox1);
             Controls.Add(button1);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ЗАКАЗЫ НА КОНЦЕРТ";
             Load += Form1_Load;
             ResumeLayout(false);

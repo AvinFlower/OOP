@@ -40,7 +40,7 @@
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlText;
             button1.Location = new Point(1231, 202);
-            button1.Margin = new Padding(4, 4, 4, 4);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(291, 69);
             button1.TabIndex = 18;
@@ -66,7 +66,7 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(15, 202);
-            button2.Margin = new Padding(4, 4, 4, 4);
+            button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(291, 69);
             button2.TabIndex = 20;
@@ -78,7 +78,7 @@
             // 
             listView1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             listView1.Location = new Point(15, 46);
-            listView1.Margin = new Padding(4, 4, 4, 4);
+            listView1.Margin = new Padding(4);
             listView1.Name = "listView1";
             listView1.Size = new Size(1506, 148);
             listView1.TabIndex = 21;
@@ -88,14 +88,16 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1538, 286);
             Controls.Add(listView1);
             Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "TotalInfo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Total Information";
             Load += TotalInfo_Load;
             ResumeLayout(false);

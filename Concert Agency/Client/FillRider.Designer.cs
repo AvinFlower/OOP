@@ -103,11 +103,11 @@
             // MixingСonsole
             // 
             MixingСonsole.Controls.Add(textBox2);
-            MixingСonsole.Location = new Point(4, 34);
+            MixingСonsole.Location = new Point(4, 29);
             MixingСonsole.Margin = new Padding(4);
             MixingСonsole.Name = "MixingСonsole";
             MixingСonsole.Padding = new Padding(4);
-            MixingСonsole.Size = new Size(1378, 521);
+            MixingСonsole.Size = new Size(1378, 526);
             MixingСonsole.TabIndex = 1;
             MixingСonsole.Text = "Mixing Сonsole";
             MixingСonsole.UseVisualStyleBackColor = true;
@@ -277,14 +277,15 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.MistyRose;
-            button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(15, 581);
+            button2.BackColor = Color.Honeydew;
+            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ControlText;
+            button2.Location = new Point(19, 583);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(291, 69);
-            button2.TabIndex = 21;
-            button2.Text = "Back";
+            button2.TabIndex = 2;
+            button2.Text = "Change Personal Information";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -292,6 +293,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1416, 665);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -299,6 +301,7 @@
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "FillRider";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Fill Rider";
             Load += FillRider_Load;
             tabControl1.ResumeLayout(false);

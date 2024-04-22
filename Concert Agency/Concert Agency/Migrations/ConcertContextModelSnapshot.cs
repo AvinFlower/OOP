@@ -64,6 +64,30 @@ namespace Concert_Agency.Migrations
                     b.ToTable("Artist");
                 });
 
+            modelBuilder.Entity("Concert_Agency.Authentication", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ArtistId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArtistId");
+
+                    b.ToTable("Authentication");
+                });
+
             modelBuilder.Entity("Concert_Agency.Concert", b =>
                 {
                     b.Property<Guid>("Id")
@@ -284,6 +308,10 @@ namespace Concert_Agency.Migrations
                     b.Property<Guid>("RiderId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("RiderNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("RiderParameters")
                         .IsRequired()
                         .HasColumnType("text");
@@ -324,6 +352,10 @@ namespace Concert_Agency.Migrations
                     b.Property<Guid>("ConcertId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("TicketNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("buyDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -362,6 +394,17 @@ namespace Concert_Agency.Migrations
                         .IsUnique();
 
                     b.ToTable("Venue");
+                });
+
+            modelBuilder.Entity("Concert_Agency.Authentication", b =>
+                {
+                    b.HasOne("Concert_Agency.Artist", "Artist")
+                        .WithMany("Authentications")
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Artist");
                 });
 
             modelBuilder.Entity("Concert_Agency.Concert", b =>
@@ -513,6 +556,8 @@ namespace Concert_Agency.Migrations
 
             modelBuilder.Entity("Concert_Agency.Artist", b =>
                 {
+                    b.Navigation("Authentications");
+
                     b.Navigation("ConcertArtists");
 
                     b.Navigation("Orders");

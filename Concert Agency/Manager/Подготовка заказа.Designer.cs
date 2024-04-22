@@ -206,6 +206,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1404, 584);
             Controls.Add(button4);
             Controls.Add(label4);
@@ -223,6 +224,7 @@
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "Form2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ПРОСМОТР ЗАКАЗА";
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();

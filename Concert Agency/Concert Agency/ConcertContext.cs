@@ -23,6 +23,7 @@ namespace Concert_Agency
         public DbSet<Order> Order { get; set; }
         public DbSet<ConcertArtist> ConcertArtist { get; set; }
         public DbSet<TechnicalParameters> TechnicalParameter { get; set; }
+        public DbSet<Authentication> Authentication { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -69,15 +69,15 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.Control;
+            label2.BackColor = Color.AliceBlue;
             label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.DarkKhaki;
-            label2.Location = new Point(246, 9);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(299, 9);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(527, 46);
+            label2.Size = new Size(407, 46);
             label2.TabIndex = 2;
-            label2.Text = "Fill the information about yourself";
+            label2.Text = "Your Personal Information";
             // 
             // label3
             // 
@@ -207,7 +207,7 @@
             button1.Name = "button1";
             button1.Size = new Size(291, 69);
             button1.TabIndex = 17;
-            button1.Text = "Next";
+            button1.Text = "Save Changes";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -223,7 +223,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(994, 437);
+            BackColor = Color.AliceBlue;
+            ClientSize = new Size(994, 324);
             Controls.Add(maskedTextBox1);
             Controls.Add(button1);
             Controls.Add(textBox7);
@@ -245,6 +246,7 @@
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "ArtistIdentification";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Идентификация";
             Load += ArtistIdentification_Load;
             ResumeLayout(false);

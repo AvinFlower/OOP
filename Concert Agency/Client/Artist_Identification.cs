@@ -18,12 +18,40 @@ namespace Client
     public partial class ArtistIdentification : Form
     {
         private readonly ConcertContext _dbContext;
-        private Guid artistId;
+        private Guid _artistId;
 
-        public ArtistIdentification()
+        public ArtistIdentification(Guid artistId)
         {
             InitializeComponent();
             _dbContext = new ConcertContext();
+            _artistId = artistId;
+
+            // Заполнение данных об артисте при загрузке формы
+            PopulateUserData(artistId);
+        }
+
+        // Создайте метод PopulateUserData
+        private void PopulateUserData(Guid artistId)
+        {
+            // Получение данных об артисте из базы данных по его ID
+            var artist = _dbContext.Artist.FirstOrDefault(a => a.Id == artistId);
+
+            if (artist != null)
+            {
+                // Заполнение полей формы данными об артисте
+                textBox1.Text = artist.FirstName;
+                textBox2.Text = artist.LastName;
+                textBox3.Text = artist.MiddleName;
+                textBox4.Text = artist.Country;
+                textBox5.Text = artist.PassportData;
+                textBox7.Text = artist.Email;
+                maskedTextBox1.Text = artist.PhoneNumber;
+                dateTimePicker1.Value = artist.DateOfBirth;
+            }
+            else
+            {
+                MessageBox.Show("Failed to retrieve artist data.");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +74,7 @@ namespace Client
             else if (string.IsNullOrEmpty(MiddleName)) MiddleName = "";
 
             Artist existingArtist = _dbContext.Artist.FirstOrDefault(a =>
-            a.Id == artistId ||
+            a.Id == _artistId ||
             (a.Email == Email &&
             a.PhoneNumber == PhoneNumber &&
             a.DateOfBirth == DateOfBirth &&
@@ -73,11 +101,11 @@ namespace Client
                 _dbContext.Artist.Add(newArtist);
                 _dbContext.SaveChanges();
 
-                artistId = newArtist.Id;
+                _artistId = newArtist.Id;
             }
             else
             {
-                artistId = existingArtist.Id;
+                _artistId = existingArtist.Id;
 
                 existingArtist.Email = Email;
                 existingArtist.PhoneNumber = PhoneNumber;
@@ -91,9 +119,14 @@ namespace Client
                 _dbContext.SaveChanges();
             }
 
-            FillRider FillRider = new FillRider(artistId);
-            FillRider.Owner = this;
-            FillRider.ShowDialog();
+            //FillRider FillRider = new FillRider(_artistId);
+            //FillRider.Owner = this;
+            //FillRider.ShowDialog();
+            Close();
+
+            // Открытие нового окна FillRider
+            FillRider fillRider = new FillRider(_artistId);
+            fillRider.ShowDialog();
         }
 
         private void ArtistIdentification_Load(object sender, EventArgs e)

@@ -197,31 +197,31 @@ using (ConcertContext db = new())
 
     //TICKETS
     Ticket ticket1 = new Ticket();
-    ticket1.Add("Стандарт, 199$", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
+    ticket1.Add("113", "Стандарт, 199$", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
     db.Ticket.Add(ticket1);
 
     Ticket ticket2 = new Ticket();
-    ticket2.Add("VIP, 1249$", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
+    ticket2.Add("234", "VIP, 1249$", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
     db.Ticket.Add(ticket2);
 
     Ticket ticket3 = new Ticket();
-    ticket3.Add("Комфорт, 399$", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
+    ticket3.Add("305", "Комфорт, 399$", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
     db.Ticket.Add(ticket3);
 
     Ticket ticket4 = new Ticket();
-    ticket4.Add("Первый класс, 699", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
+    ticket4.Add("400", "Первый класс, 699", new DateTime(2024, 03, 14, 15, 30, 0).ToUniversalTime(), concert1);
     db.Ticket.Add(ticket4);
 
     Ticket ticket5 = new Ticket();
-    ticket5.Add("Стандарт, 199$", new DateTime(2024, 03, 14, 15, 31, 0).ToUniversalTime(), concert1);
+    ticket5.Add("105", "Стандарт, 199$", new DateTime(2024, 03, 14, 15, 31, 0).ToUniversalTime(), concert1);
     db.Ticket.Add(ticket5);
 
     Ticket ticket6 = new Ticket();
-    ticket6.Add("Стандарт, 199$", new DateTime(2024, 03, 14, 16, 32, 0).ToUniversalTime(), concert1);
+    ticket6.Add("61", "Стандарт, 199$", new DateTime(2024, 03, 14, 16, 32, 0).ToUniversalTime(), concert1);
     db.Ticket.Add(ticket6);
 
     Ticket ticket7 = new Ticket();
-    ticket7.Add("Стандарт, 199$", new DateTime(2024, 03, 15, 15, 33, 0).ToUniversalTime(), concert1);
+    ticket7.Add("799", "Стандарт, 199$", new DateTime(2024, 03, 15, 15, 33, 0).ToUniversalTime(), concert1);
     db.Ticket.Add(ticket7);
 
     db.SaveChanges();
@@ -337,59 +337,59 @@ using (ConcertContext db = new())
 
     //RIDERREQUESTS
     RiderRequest riderRequest1 = new RiderRequest();
-    riderRequest1.Add("JBL, 1200 Вт", rider1, technicalParameters1);
+    riderRequest1.Add("1", "Звуковая система: JBL, 1200 Вт", rider1, technicalParameters1);
     rider1.RidersRequests.Add(riderRequest1);
     db.Rider.Update(rider1);
     db.RiderRequest.Update(riderRequest1);
 
     RiderRequest riderRequest11 = new RiderRequest();
-    riderRequest11.Add("Профессиональная служба безопасности", rider1, technicalParameters7);
+    riderRequest11.Add("1", "Безопасность: Профессиональная служба безопасности", rider1, technicalParameters7);
     rider1.RidersRequests.Add(riderRequest11);
     db.Rider.Update(rider1);
     db.RiderRequest.Update(riderRequest11);
 
 
     RiderRequest riderRequest2 = new RiderRequest();
-    riderRequest2.Add("Fender Jazz Bass", rider2, technicalParameters5);
+    riderRequest2.Add("2", "Гитара: Fender Jazz Bass", rider2, technicalParameters5);
     rider2.RidersRequests.Add(riderRequest2);
     db.Rider.Update(rider2);
     db.RiderRequest.Update(riderRequest2);
     
     RiderRequest riderRequest22 = new RiderRequest();
-    riderRequest22.Add("Yamaha D3X", rider2, technicalParameters4);
+    riderRequest22.Add("2", "Клавишные: Yamaha D3X", rider2, technicalParameters4);
     rider2.RidersRequests.Add(riderRequest22);
     db.Rider.Update(rider2);
     db.RiderRequest.Update(riderRequest22);
 
 
     RiderRequest riderRequest3 = new RiderRequest();
-    riderRequest3.Add("10000 человек", rider3, technicalParameters8);
+    riderRequest3.Add("3", "Вместимость зала: 10000 человек", rider3, technicalParameters8);
     rider3.RidersRequests.Add(riderRequest3);
     db.Rider.Update(rider3);
     db.RiderRequest.Update(riderRequest3);
     
     RiderRequest riderRequest33 = new RiderRequest();
-    riderRequest33.Add("Behringer, 24 канала", rider3, technicalParameters2);
+    riderRequest33.Add("3", "Микшерный пульт: Behringer, 24 канала", rider3, technicalParameters2);
     rider3.RidersRequests.Add(riderRequest33);
     db.Rider.Update(rider3);
     db.RiderRequest.Update(riderRequest33);
     
     RiderRequest riderRequest333 = new RiderRequest();
-    riderRequest333.Add("Fender Jazz Bass", rider3, technicalParameters5);
+    riderRequest333.Add("3", "Гитара: Fender Jazz Bass", rider3, technicalParameters5);
     rider3.RidersRequests.Add(riderRequest333);
     db.Rider.Update(rider3);
     db.RiderRequest.Update(riderRequest333);
 
 
     RiderRequest riderRequest4 = new RiderRequest();
-    riderRequest4.Add("Shure SM58, 3 шт.", rider4, technicalParameters3);
+    riderRequest4.Add("4", "Микрофон: Shure SM58, 3 шт.", rider4, technicalParameters3);
     rider4.RidersRequests.Add(riderRequest4);
     db.Rider.Update(rider4);
     db.RiderRequest.Update(riderRequest4);
 
 
     RiderRequest riderRequest5 = new RiderRequest();
-    riderRequest5.Add("Mini Moog", rider5, technicalParameters4);
+    riderRequest5.Add("5", "Клавишные: Mini Moog", rider5, technicalParameters4);
     rider5.RidersRequests.Add(riderRequest5);
     db.Rider.Update(rider5);
     db.RiderRequest.Update(riderRequest5);
@@ -435,7 +435,7 @@ using (ConcertContext db = new())
     db.OrganizationalRequest.Update(organizationalRequest6);
 
     OrganizationalRequest organizationalRequest7 = new OrganizationalRequest();
-    organizationalRequest7.Add("Любой вид", technicalParameters7, venue1);
+    organizationalRequest7.Add("Два телохранителя", technicalParameters7, venue1);
     venue1.OrganizationalRequests.Add(organizationalRequest7);
     db.Venue.Update(venue1);
     db.OrganizationalRequest.Update(organizationalRequest7);
@@ -447,7 +447,7 @@ using (ConcertContext db = new())
     db.OrganizationalRequest.Update(organizationalRequest8);
 
     OrganizationalRequest organizationalRequest9 = new OrganizationalRequest();
-    organizationalRequest9.Add("Любое", technicalParameters9, venue1);
+    organizationalRequest9.Add("5 звезд, все включено", technicalParameters9, venue1);
     venue1.OrganizationalRequests.Add(organizationalRequest9);
     db.Venue.Update(venue1);
     db.OrganizationalRequest.Update(organizationalRequest9);
@@ -469,7 +469,7 @@ using (ConcertContext db = new())
     db.OrganizationalRequest.Update(organizationalRequest11);
 
     OrganizationalRequest organizationalRequest12 = new OrganizationalRequest(); 
-    organizationalRequest12.Add("6 штук", technicalParameters3, venue2);
+    organizationalRequest12.Add("AKG P240, 6 штук", technicalParameters3, venue2);
     venue2.OrganizationalRequests.Add(organizationalRequest12);
     db.Venue.Update(venue2);
     db.OrganizationalRequest.Update(organizationalRequest12);
@@ -487,7 +487,7 @@ using (ConcertContext db = new())
     db.OrganizationalRequest.Update(organizationalRequest14);
 
     OrganizationalRequest organizationalRequest15 = new OrganizationalRequest(); 
-    organizationalRequest15.Add("Любые", technicalParameters6, venue2);
+    organizationalRequest15.Add("Лес и полнолуние", technicalParameters6, venue2);
     venue2.OrganizationalRequests.Add(organizationalRequest15);
     db.Venue.Update(venue2);
     db.OrganizationalRequest.Update(organizationalRequest15);
@@ -687,6 +687,40 @@ using (ConcertContext db = new())
     db.Venue.Update(venue5);
     db.OrganizationalRequest.Update(organizationalRequest45);
 
+
+    db.SaveChanges();
+
+
+    //AUTHENTICATIONS
+    Authentication authentication1 = new Authentication();
+    authentication1.Add("user1", "userp1", artist1);
+    artist1.Authentications.Add(authentication1);
+    db.Authentication.Update(authentication1);
+    db.Artist.Update(artist1);
+
+    Authentication authentication2 = new Authentication();
+    authentication2.Add("user2", "userp2", artist2);
+    artist2.Authentications.Add(authentication2);
+    db.Authentication.Update(authentication2);
+    db.Artist.Update(artist2);
+
+    Authentication authentication3 = new Authentication();
+    authentication3.Add("user3", "userp3", artist3);
+    artist3.Authentications.Add(authentication3);
+    db.Authentication.Update(authentication3);
+    db.Artist.Update(artist3);
+
+    Authentication authentication4 = new Authentication();
+    authentication4.Add("user4", "userp4", artist4);
+    artist4.Authentications.Add(authentication4);
+    db.Authentication.Update(authentication4);
+    db.Artist.Update(artist4);
+
+    Authentication authentication5 = new Authentication();
+    authentication5.Add("user5", "userp5", artist5);
+    artist5.Authentications.Add(authentication5);
+    db.Authentication.Update(authentication5);
+    db.Artist.Update(artist5);
 
     db.SaveChanges();
 }
