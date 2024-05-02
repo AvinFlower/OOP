@@ -1,0 +1,5 @@
+Ticket Sales Statistics
+------------------------
+Total Tickets Sold: 13
+Total Revenue: $18526
+Average Ticket Price: $1425,08

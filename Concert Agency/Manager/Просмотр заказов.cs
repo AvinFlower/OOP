@@ -158,5 +158,58 @@ namespace Manager
             OrdersInProcess.ShowDialog();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Получить значения из textBox'ов
+            string firstName = textBox1.Text;
+            string lastName = textBox2.Text;
+            string passportData = textBox3.Text;
+
+            // Очистить ListView перед добавлением отфильтрованных значений
+            listView1.Items.Clear();
+
+            // Фильтрация значений и добавление соответствующих элементов в ListView
+            var filteredOrdersQuery = _dbContext.Order
+                .Include(order => order.Artist)
+                .Where(order => order.OrderStatus == "Preparation");
+
+            if (!string.IsNullOrWhiteSpace(firstName))
+            {
+                filteredOrdersQuery = filteredOrdersQuery.Where(order => order.Artist.FirstName.Contains(firstName));
+            }
+            if (!string.IsNullOrWhiteSpace(lastName))
+            {
+                filteredOrdersQuery = filteredOrdersQuery.Where(order => order.Artist.LastName.Contains(lastName));
+            }
+            if (!string.IsNullOrWhiteSpace(passportData))
+            {
+                filteredOrdersQuery = filteredOrdersQuery.Where(order => order.Artist.PassportData.Contains(passportData));
+            }
+
+            var filteredOrders = filteredOrdersQuery.ToList();
+
+            foreach (var order in filteredOrders)
+            {
+                var artist = order.Artist;
+
+                ListViewItem item = new ListViewItem(order.OrderNum.ToString());
+                item.SubItems.Add(order.OrderDate.ToString());
+                item.SubItems.Add(artist.Email);
+                item.SubItems.Add(artist.PhoneNumber);
+                item.SubItems.Add(artist.FirstName);
+                item.SubItems.Add(artist.LastName);
+                item.SubItems.Add(artist.MiddleName);
+                item.SubItems.Add(artist.PassportData);
+
+                listView1.Items.Add(item);
+            }
+
+            // Автоматическое изменение размеров столбцов на основе содержимого
+            foreach (ColumnHeader column in listView1.Columns)
+            {
+                column.Width = -2; // -2 указывает, чтобы ширина была установлена автоматически
+            }
+        }
+
     }
 }

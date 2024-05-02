@@ -89,5 +89,10 @@ namespace Admin
             Close();
             mainForm.Show();
         }
+
+        private void AddValue_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

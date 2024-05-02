@@ -30,6 +30,7 @@
         {
             button1 = new Button();
             button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -59,12 +60,27 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Honeydew;
+            button3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ControlText;
+            button3.Location = new Point(611, 12);
+            button3.Margin = new Padding(4);
+            button3.Name = "button3";
+            button3.Size = new Size(291, 69);
+            button3.TabIndex = 38;
+            button3.Text = "Сменить БД";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(616, 94);
+            ClientSize = new Size(915, 94);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Main";
@@ -78,5 +94,6 @@
 
         private Button button1;
         private Button button2;
+        private Button button3;
     }
 }

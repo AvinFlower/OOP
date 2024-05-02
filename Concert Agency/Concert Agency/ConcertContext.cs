@@ -1,10 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Concert_Agency
 {
@@ -28,7 +22,6 @@ namespace Concert_Agency
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=concert;Username=postgres;Password=299NhbnjY");
-            //optionsBuilder.EnableSensitiveDataLogging();
 
         }
 

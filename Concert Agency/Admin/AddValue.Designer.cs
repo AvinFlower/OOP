@@ -199,6 +199,7 @@
             Name = "AddValue";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Главная";
+            Load += AddValue_Load;
             ResumeLayout(false);
         }
 

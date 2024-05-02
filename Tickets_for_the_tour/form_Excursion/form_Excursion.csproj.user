@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Add_Attractions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add_Excursion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add_Flight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add_RoutPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add_Ship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Add_Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit_Excurtions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit_Flights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Flights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Excursion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Rout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Ships.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
